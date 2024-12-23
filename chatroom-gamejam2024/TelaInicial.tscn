@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv6g16atb2s12"]
+
+[ext_resource type="Texture2D" uid="uid://bavce4jwnhoaq" path="res://assets/Tela de Inicio/Basicbotão créditos.png" id="1_3rnk4"]
+[ext_resource type="Texture2D" uid="uid://cynxnvi6xyr8f" path="res://assets/Tela de Inicio/BasicBotão Começar.png" id="2_gcuj3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Botao Creditos" type="NinePatchRect" parent="."]
+offset_left = 181.0
+offset_top = 479.0
+offset_right = 542.0
+offset_bottom = 568.0
+texture = ExtResource("1_3rnk4")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Botao Comecar" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 370.0
+offset_right = 542.0
+offset_bottom = 459.0
+texture = ExtResource("2_gcuj3")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
