@@ -13,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Botao Creditos" type="NinePatchRect" parent="."]
+layout_mode = 0
 offset_left = 181.0
 offset_top = 479.0
 offset_right = 542.0
