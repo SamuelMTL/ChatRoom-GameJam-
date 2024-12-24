@@ -10,7 +10,6 @@ ChatRoom é uma visual novel que simula uma plataforma de conversas online, seme
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Equipe](#equipe)
 - [Como Executar](#como-executar)
-- [Contribuições](#contribuições)
 - [Licença](#licença)
 
 ---
