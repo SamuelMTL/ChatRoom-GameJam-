@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv6g16atb2s12"]
+[gd_scene load_steps=4 format=3 uid="uid://bv6g16atb2s12"]
 
 [ext_resource type="Texture2D" uid="uid://bavce4jwnhoaq" path="res://assets/Tela de Inicio/Basicbotão créditos.png" id="1_3rnk4"]
 [ext_resource type="Texture2D" uid="uid://cynxnvi6xyr8f" path="res://assets/Tela de Inicio/BasicBotão Começar.png" id="2_gcuj3"]
+[ext_resource type="Script" path="res://scripts/button_comecar.gd" id="3_p3db5"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -29,3 +30,10 @@ offset_bottom = 459.0
 texture = ExtResource("2_gcuj3")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
+
+[node name="Button" type="Button" parent="Botao Comecar"]
+layout_mode = 0
+offset_right = 361.0
+offset_bottom = 89.0
+flat = true
+script = ExtResource("3_p3db5")
