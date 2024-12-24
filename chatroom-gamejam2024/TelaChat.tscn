@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://boobo1s28lsfo"]
+[gd_scene load_steps=8 format=3 uid="uid://boobo1s28lsfo"]
 
-[ext_resource type="Texture2D" uid="uid://dxixdjebnr3rn" path="res://assets/TelaChat/TelaSuperior1.png" id="1_d1tk2"]
-[ext_resource type="Texture2D" uid="uid://bmr188ni5vbc0" path="res://assets/TelaChat/TelaSuperior2.png" id="2_4o6ob"]
+[ext_resource type="Texture2D" uid="uid://coiiciyene4p" path="res://assets/TelaChat/SuperiorMeio.png" id="1_26vko"]
 [ext_resource type="Texture2D" uid="uid://do408hbry0a5b" path="res://assets/TelaChat/FundoEsquerdo.png" id="2_guiex"]
-[ext_resource type="Texture2D" uid="uid://yg3of0t25738" path="res://assets/TelaChat/ConversasEsquerda.png" id="4_vttfd"]
+[ext_resource type="Texture2D" uid="uid://7c722ifbayr8" path="res://assets/TelaChat/SuperiorConversas.png" id="3_1wbyb"]
+[ext_resource type="Texture2D" uid="uid://cr7dy5abeda0l" path="res://assets/TelaChat/PerfilSuperior.png" id="4_wyom2"]
+[ext_resource type="Texture2D" uid="uid://b22scvllnbcjc" path="res://assets/TelaChat/Inferior1.png" id="5_pcvd4"]
+[ext_resource type="Texture2D" uid="uid://dg2nco74jpiux" path="res://assets/TelaChat/PerfilInfo1.png" id="6_mgatc"]
+[ext_resource type="Texture2D" uid="uid://btexgi786yvge" path="res://assets/TelaChat/Conversas1.png" id="7_qxafh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,18 +17,23 @@ offset_top = 9.72
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 646.0
+
 [node name="CentralSuperior" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(1248, 90)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -408.0
-offset_right = 1228.0
-offset_bottom = 118.0
+offset_left = -385.0
+offset_right = 1139.0
+offset_bottom = 144.0
 grow_horizontal = 2
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_4o6ob")
+texture = ExtResource("1_26vko")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
@@ -39,7 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -1152.0
 offset_top = -287.0
-offset_right = -816.0
+offset_right = -770.0
 offset_bottom = 937.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -56,9 +64,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -167.0
+offset_left = -201.0
 offset_top = -303.0
-offset_right = 169.0
+offset_right = 205.0
 offset_bottom = 949.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -70,32 +78,47 @@ axis_stretch_vertical = 2
 [node name="Conversas" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(306, 90)
 layout_mode = 1
-offset_right = 336.0
-offset_bottom = 120.0
+offset_right = 382.0
+offset_bottom = 144.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_d1tk2")
+texture = ExtResource("3_1wbyb")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
+
+[node name="Perfil" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(306, 90)
+layout_mode = 0
+offset_left = 951.0
+offset_right = 1357.0
+offset_bottom = 144.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_wyom2")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Inferior1" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.091
+offset_left = 3.0
+offset_top = 609.0
+offset_right = 1133.42
+offset_bottom = 590.032
+texture = ExtResource("5_pcvd4")
+
+[node name="PerfilInfo" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 123.0
+offset_right = 1132.0
+offset_bottom = 456.0
+texture = ExtResource("6_mgatc")
 
 [node name="Conversas2" type="NinePatchRect" parent="."]
-custom_minimum_size = Vector2(306, 90)
 layout_mode = 0
-offset_left = 985.0
-offset_right = 1321.0
-offset_bottom = 120.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_d1tk2")
-axis_stretch_horizontal = 2
-axis_stretch_vertical = 2
-
-[node name="Conversas3" type="NinePatchRect" parent="."]
-custom_minimum_size = Vector2(306, 90)
-layout_mode = 0
-offset_left = 8.0
-offset_top = 132.0
-offset_right = 314.0
-offset_bottom = 468.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_vttfd")
-axis_stretch_horizontal = 2
-axis_stretch_vertical = 2
+offset_left = 14.0
+offset_top = 90.0
+offset_right = 176.0
+offset_bottom = 237.0
+texture = ExtResource("7_qxafh")

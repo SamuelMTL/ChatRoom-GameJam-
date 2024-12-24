@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxixdjebnr3rn"
-path="res://.godot/imported/TelaSuperior1.png-7aa9c6a47cf8eab25e63e869d7a4c4ef.ctex"
+uid="uid://7c722ifbayr8"
+path="res://.godot/imported/SuperiorConversas.png-7b90121c86d7706a1ef62cd26f628d24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TelaChat/TelaSuperior1.png"
-dest_files=["res://.godot/imported/TelaSuperior1.png-7aa9c6a47cf8eab25e63e869d7a4c4ef.ctex"]
+source_file="res://assets/TelaChat/SuperiorConversas.png"
+dest_files=["res://.godot/imported/SuperiorConversas.png-7b90121c86d7706a1ef62cd26f628d24.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmr188ni5vbc0"
-path="res://.godot/imported/TelaSuperior2.png-911faf4070c570237f204fabbe1806b0.ctex"
+uid="uid://c8bk0iq4junkv"
+path="res://.godot/imported/BasicMenuButton.png-d150a9419befcba55bf447d76119a829.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TelaChat/TelaSuperior2.png"
-dest_files=["res://.godot/imported/TelaSuperior2.png-911faf4070c570237f204fabbe1806b0.ctex"]
+source_file="res://assets/Tela Créditos/BasicMenuButton.png"
+dest_files=["res://.godot/imported/BasicMenuButton.png-d150a9419befcba55bf447d76119a829.ctex"]
 
 [params]
 

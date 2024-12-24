@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv6g16atb2s12"]
+[gd_scene load_steps=5 format=3 uid="uid://bv6g16atb2s12"]
 
 [ext_resource type="Texture2D" uid="uid://bavce4jwnhoaq" path="res://assets/Tela de Inicio/Basicbotão créditos.png" id="1_3rnk4"]
+[ext_resource type="Script" path="res://scripts/button_creditos.gd" id="2_1vgmb"]
 [ext_resource type="Texture2D" uid="uid://cynxnvi6xyr8f" path="res://assets/Tela de Inicio/BasicBotão Começar.png" id="2_gcuj3"]
 [ext_resource type="Script" path="res://scripts/button_comecar.gd" id="3_p3db5"]
 
@@ -21,6 +22,13 @@ offset_bottom = 568.0
 texture = ExtResource("1_3rnk4")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
+
+[node name="Button" type="Button" parent="Botao Creditos"]
+layout_mode = 0
+offset_right = 359.0
+offset_bottom = 87.0
+flat = true
+script = ExtResource("2_1vgmb")
 
 [node name="Botao Comecar" type="NinePatchRect" parent="."]
 layout_mode = 0
