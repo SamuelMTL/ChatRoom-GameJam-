@@ -43,6 +43,7 @@ func next_script():
 		print("Falha ao instanciar ChatBox")
 		return
 
+	var asset = chatbox.get_node("ChatBox")
 	var name_text = chatbox.get_node("Name")
 	var text_text = chatbox.get_node("Text")
 	if not name_text or not text_text:

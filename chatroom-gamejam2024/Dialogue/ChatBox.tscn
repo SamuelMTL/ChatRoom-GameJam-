@@ -9,6 +9,11 @@ anchor_bottom = 1.0
 offset_bottom = -383.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ChatBox" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 257.0
 texture = ExtResource("1_iuqnu")
 
 [node name="Name" type="RichTextLabel" parent="."]
