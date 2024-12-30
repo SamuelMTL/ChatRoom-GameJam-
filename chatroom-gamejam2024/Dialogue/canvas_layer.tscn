@@ -1,40 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwnyfgfcr8htr"]
+[gd_scene load_steps=2 format=3 uid="uid://cwnyfgfcr8htr"]
 
-[ext_resource type="Script" path="res://Dialogue/dialogo_TelaIntroducao.gd" id="1_mfx37"]
-[ext_resource type="Texture2D" uid="uid://c85uirueqishb" path="res://assets/TelaIntroducao/UserChatBox.png" id="2_82m13"]
+[ext_resource type="Script" path="res://scripts/dialogo_TelaIntroducao.gd" id="1_mfx37"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_mfx37")
 json_file = "res://Dialogue/json/textoIntro.json"
 
-[node name="ChatBox" type="NinePatchRect" parent="."]
-anchors_preset = -1
-anchor_right = 0.084
-anchor_bottom = 0.101
-offset_left = 218.0
-offset_top = 90.0
-offset_right = 619.232
-offset_bottom = 157.552
-texture = ExtResource("2_82m13")
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 558.0
+offset_top = 6.0
+offset_right = 1140.0
+offset_bottom = 647.0
 
-[node name="Name" type="RichTextLabel" parent="ChatBox"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 7.0
-offset_right = 95.0
-offset_bottom = 47.0
-bbcode_enabled = true
-text = "Name
-"
-
-[node name="Text" type="RichTextLabel" parent="ChatBox"]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 34.0
-offset_right = 469.0
-offset_bottom = 110.0
-bbcode_enabled = true
-text = "Text
-"
-fit_content = true
-scroll_active = false
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
