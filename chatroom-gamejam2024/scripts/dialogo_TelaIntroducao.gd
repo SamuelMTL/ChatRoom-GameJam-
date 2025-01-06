@@ -53,6 +53,14 @@ func next_script():
 	name_text.text = sender
 	text_text.text = text
 	
+	#ajustanfo a posicao dependendo do sender
+	if sender == "Max":
+		chatbox.rect_min_size = Vector2(400, 0) 
+		chatbox.rect_position = Vector2(20, 0)
+	elif sender == "Ariel":
+		chatbox.rect_min_size = Vector2(400, 0)
+		chatbox.rect_position = Vector2(620, 0)
+	
 	$ScrollContainer/VBoxContainer.add_child(chatbox)
 	print("sucesso ao adicionar chatbox:", sender, text)
 	
