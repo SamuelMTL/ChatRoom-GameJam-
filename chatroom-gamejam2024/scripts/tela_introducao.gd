@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 @export_file("res://Dialogue/json/textoIntro.json") var json_file: String = "" 
 
@@ -32,6 +32,7 @@ func next_script():
 		d_active = false
 		return
 	
+	
 	#dados do dialogo atual
 	var current_data = dialogue[current_dialogue_id]
 	var sender = current_data['sender']
@@ -55,11 +56,11 @@ func next_script():
 	
 	#ajustanfo a posicao dependendo do sender
 	if sender == "Max":
-		chatbox.rect_min_size = Vector2(400, 0) 
-		chatbox.rect_position = Vector2(20, 0)
+		chatbox.set_anchors_and_offsets_preset(Control.PRESET_LEFT_WIDE)
+		chatbox.set_size(Vector2(400, 50))
 	elif sender == "Ariel":
-		chatbox.rect_min_size = Vector2(400, 0)
-		chatbox.rect_position = Vector2(620, 0)
+		chatbox.set_anchors_and_offsets_preset(Control.PRESET_RIGHT_WIDE)
+		chatbox.set_size(Vector2(400, 50))
 	
 	$ScrollContainer/VBoxContainer.add_child(chatbox)
 	print("sucesso ao adicionar chatbox:", sender, text)
