@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cymjjeeog11rc"]
+[gd_scene load_steps=2 format=3 uid="uid://cymjjeeog11rc"]
+
+[ext_resource type="Script" path="res://scripts/botaoIntro.gd" id="1_vd3kr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,3 +9,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 978.0
+offset_top = 534.0
+offset_right = 1081.0
+offset_bottom = 614.0
+script = ExtResource("1_vd3kr")
