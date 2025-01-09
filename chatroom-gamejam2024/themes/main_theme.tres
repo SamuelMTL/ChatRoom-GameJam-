@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://bojc7127wexfm"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://bojc7127wexfm"]
 
 [ext_resource type="FontFile" uid="uid://cjf3inc3uq1fd" path="res://assets/Fonts/Itim,Jost/Itim/Itim-Regular.ttf" id="1_2xi57"]
+[ext_resource type="FontFile" uid="uid://ct312wthlqri7" path="res://assets/Fonts/Itim,Jost/Jost/static/Jost-Regular.ttf" id="1_66ior"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3d0y"]
 bg_color = Color(0.556863, 0.521569, 0.713726, 1)
@@ -65,10 +66,22 @@ border_width_right = 4
 border_width_bottom = 4
 border_color = Color(0.184314, 0.156863, 0.282353, 1)
 corner_radius_bottom_right = 14
-corner_radius_bottom_left = 14
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xminq"]
+bg_color = Color(0.270588, 0.247059, 0.368627, 1)
+border_color = Color(0.594917, 0.141771, 0.262341, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmcuy"]
+bg_color = Color(1, 0.326027, 0.395457, 1)
+border_width_left = 8
+border_color = Color(0.619608, 0.611765, 0.713726, 1)
 
 [resource]
 Button/styles/normal = SubResource("StyleBoxFlat_r3d0y")
+ContentLabel/base_type = &"Label"
+ContentLabel/font_sizes/font_size = 12
+ContentLabel/fonts/font = ExtResource("1_66ior")
 CustomPanel/base_type = &"Panel"
 CustomPanel/styles/panel = SubResource("StyleBoxFlat_7q76h")
 CustomPanel_2/base_type = &"Panel"
@@ -95,3 +108,5 @@ Label/styles/normal = SubResource("StyleBoxEmpty_06mrd")
 Panel/styles/panel = SubResource("StyleBoxFlat_put4a")
 Title/base_type = &"Label"
 Title/font_sizes/font_size = 13
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_xminq")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_xmcuy")
