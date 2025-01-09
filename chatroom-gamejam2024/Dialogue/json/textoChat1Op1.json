@@ -1,10 +1,10 @@
 [
-    {"sender":"Max", "text":"Parece que vocês estão falando de um jogo difícil. Qual jogo é?"},
-    {"sender":"Hannah", "text":"Oi! A gente tá falando de Return of the Chus. Conhece?"},
-    {"sender":"Max", "text":"Conheço sim, esse jogo é incrível! Mas os chefes são realmente complicados." },
-    {"sender":"Teodoro", "text":"Verdade, cada chefão é uma luta de paciência."},
-    {"sender":"Teodoro", "text":"Ei, você é o amigo que Ariel convidou para o servidor, não é?"},
-    {"sender":"Teodoro", "text":"Eu sou o Teodoro, e essa é a Hannah, aliás."},
-    {"sender":"Hannah", "text":"Oiê, seja bem-vindo!"},
-    {"sender":"Max", "text":"Obrigada! Sou Max"}
+	{"sender":"Max", "text":"Parece que vocês estão falando de um jogo difícil. Qual jogo é?"},
+	{"sender":"Hannah", "text":"Oi! A gente tá falando de Return of the Chus. Conhece?"},
+	{"sender":"Max", "text":"Conheço sim, esse jogo é incrível! Mas os chefes são realmente complicados." },
+	{"sender":"Teodoro", "text":"Verdade, cada chefão é uma luta de paciência."},
+	{"sender":"Teodoro", "text":"Ei, você é o amigo que Ariel convidou para o servidor, não é?"},
+	{"sender":"Teodoro", "text":"Eu sou o Teodoro, e essa é a Hannah, aliás."},
+	{"sender":"Hannah", "text":"Oiê, seja bem-vindo!"},
+	{"sender":"Max", "text":"Obrigada! Sou Max"}
 ]

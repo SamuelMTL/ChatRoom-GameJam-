@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/botaoIntro.gd" id="1_vd3kr"]
 [ext_resource type="Texture2D" uid="uid://dayqt7agdcun2" path="res://assets/TelaIntroducao/Ilustração_Sem_Título 57 2.png" id="2_pp0ug"]
 
-[node name="Control2" type="Control"]
+[node name="Control3" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

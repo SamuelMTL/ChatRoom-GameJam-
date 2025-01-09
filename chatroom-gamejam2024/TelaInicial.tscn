@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cynxnvi6xyr8f" path="res://assets/Tela de Inicio/BasicBotão Começar.png" id="2_gcuj3"]
 [ext_resource type="Script" path="res://scripts/button_comecar.gd" id="3_p3db5"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

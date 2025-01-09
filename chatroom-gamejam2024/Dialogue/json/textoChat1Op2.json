@@ -1,0 +1,9 @@
+[
+    {"sender":"Max", "text":"Oi, pessoal… Fui convidado para o servidor por Ariel. Meu nome é Max!"},
+    {"sender":"Teodoro", "text":"Aah, ele falou sobre você! Seja bem-vindo Max! Meu nome é Teodoro."},
+    {"sender":"Hannah", "text":"Oiê, Max! Que bom que veio! Eu sou a Hannah!"},
+    {"sender":"Max", "text":"Desculpa ter interrompido a conversa anterior, aliás… Hehe."},
+    {"sender":"Hannah", "text":"Que nada, sem problemas!"},
+    {"sender":"Teodoro", "text":" Max, você joga Return of the Chus?"},
+    {"sender":"Max", "text":"Eu joguei há um tempo, mas nunca consegui zerar. Fiquei empacado num dos chefes e acabei desistindo…"}
+]
