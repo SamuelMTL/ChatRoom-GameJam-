@@ -10,4 +10,4 @@ func _process(delta: float) -> void:
 
 
 func _button_pressed():
-	get_tree().change_scene_to_file("res://TelaIntroducao.tscn")
+	get_tree().change_scene_to_file("res://TelaVoiceCall.tscn")

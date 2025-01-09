@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpwaj62c0rxm3"]
+
+[ext_resource type="Texture2D" uid="uid://ca7ioj3amrjpa" path="res://assets/TelaIntroducao/OtherChatBox.png" id="1_iuqnu"]
+
+[sub_resource type="Theme" id="Theme_vv25w"]
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_83ur7"]
+default_font_size = 24
+
+[node name="ChatBox" type="Control"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -383.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChatBox" type="NinePatchRect" parent="."]
+layout_mode = 2
+offset_right = 831.0
+offset_bottom = 265.0
+texture = ExtResource("1_iuqnu")
+
+[node name="Name" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 43.0
+offset_top = 19.0
+offset_right = 255.0
+offset_bottom = 80.0
+theme = SubResource("Theme_vv25w")
+
+[node name="Text" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 48.0
+offset_top = 101.0
+offset_right = 794.0
+offset_bottom = 217.0
+theme = SubResource("Theme_83ur7")
