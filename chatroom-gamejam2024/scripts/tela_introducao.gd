@@ -54,15 +54,20 @@ func next_script():
 	name_text.text = sender
 	text_text.text = text
 	
-	#ajustanfo a posicao dependendo do sender
-	if sender == "Max":
-		chatbox.set_anchors_and_offsets_preset(Control.PRESET_LEFT_WIDE)
-		chatbox.set_size(Vector2(400, 50))
-	elif sender == "Ariel":
-		chatbox.set_anchors_and_offsets_preset(Control.PRESET_RIGHT_WIDE)
-		chatbox.set_size(Vector2(400, 50))
+	var alignment_container = HBoxContainer.new()
+	alignment_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	
-	$ScrollContainer/VBoxContainer.add_child(chatbox)
+	#ajustanfo a posicao dependendo do sender
+	if sender == "Ariel":
+		#lado esquerdo
+		alignment_container.add_child(chatbox)
+		alignment_container.alignment = BoxContainer.ALIGNMENT_BEGIN
+	elif sender == "Max":
+		#lado direito
+		alignment_container.add_child(chatbox)
+		alignment_container.alignment = BoxContainer.ALIGNMENT_END
+	
+	$ScrollContainer/VBoxContainer.add_child(alignment_container)
 	print("sucesso ao adicionar chatbox:", sender, text)
 	
 	
