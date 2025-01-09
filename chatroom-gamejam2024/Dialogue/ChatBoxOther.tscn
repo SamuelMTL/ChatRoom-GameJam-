@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpwaj62c0rxm3"]
 
-[ext_resource type="Texture2D" uid="uid://ca7ioj3amrjpa" path="res://assets/TelaIntroducao/OtherChatBox.png" id="1_iuqnu"]
-
-[sub_resource type="Theme" id="Theme_83ur7"]
-default_font_size = 10
+[ext_resource type="Texture2D" uid="uid://ca7ioj3amrjpa" path="res://assets/TelaIntroducao/OtherChatBox.png" id="1_t1jtj"]
 
 [sub_resource type="Theme" id="Theme_vv25w"]
 default_font_size = 12
 
-[node name="ChatBox" type="Control"]
+[sub_resource type="Theme" id="Theme_83ur7"]
+default_font_size = 10
+
+[node name="ChatBoxOther" type="Control"]
 custom_minimum_size = Vector2(400, 50)
 layout_mode = 3
 anchors_preset = 15
@@ -26,16 +26,8 @@ layout_mode = 2
 offset_left = 21.0
 offset_top = 4.0
 offset_right = 349.0
-offset_bottom = 101.0
-texture = ExtResource("1_iuqnu")
-
-[node name="Text" type="RichTextLabel" parent="."]
-layout_mode = 2
-offset_left = 45.0
-offset_top = 38.0
-offset_right = 335.0
-offset_bottom = 89.0
-theme = SubResource("Theme_83ur7")
+offset_bottom = 91.0
+texture = ExtResource("1_t1jtj")
 
 [node name="Name" type="RichTextLabel" parent="."]
 layout_mode = 2
@@ -44,3 +36,11 @@ offset_top = 12.0
 offset_right = 157.0
 offset_bottom = 41.0
 theme = SubResource("Theme_vv25w")
+
+[node name="Text" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 45.0
+offset_top = 38.0
+offset_right = 335.0
+offset_bottom = 89.0
+theme = SubResource("Theme_83ur7")
