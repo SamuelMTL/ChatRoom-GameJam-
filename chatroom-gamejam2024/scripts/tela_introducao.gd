@@ -6,7 +6,8 @@ var dialogue = []
 var current_dialogue_id = -1
 var d_active = true
 
-@onready var chatbox_scene = preload("res://Dialogue/ChatBox.tscn")
+@onready var chatboxother_scene = preload("res://Dialogue/ChatBoxOther.tscn")
+@onready var chatboxprot_scene = preload("res://Dialogue/ChatBoxProt.tscn")
 
 func _ready():
 	start()
@@ -38,31 +39,57 @@ func next_script():
 	var sender = current_data['sender']
 	var text = current_data['text']
 	
-	#intancia
-	var chatbox = chatbox_scene.instantiate() 
-	if not chatbox:
+	#intancia do chatbox do other character (com ctz tem um nome melhor, mas n pensei em um)
+	var chatboxother = chatboxother_scene.instantiate() 
+	if not chatboxother:
 		print("Falha ao instanciar ChatBox")
 		return
 
-	var asset = chatbox.get_node("ChatBox")
-	var name_text = chatbox.get_node("Name")
-	var text_text = chatbox.get_node("Text")
-	if not name_text or not text_text:
+	var asset_other = chatboxother.get_node("ChatBox")
+	var name_text_other = chatboxother.get_node("Name")
+	var text_text_other = chatboxother.get_node("Text")
+	if not name_text_other or not text_text_other:
 		print("Nós internos de chatbox n foram encontrados")
 		return
 		
-	name_text.text = sender
-	text_text.text = text
+	name_text_other.text = sender
+	text_text_other.text = text
+	
+	#instancia do chatbox do protagonista 
+	var chatboxprot = chatboxprot_scene.instantiate() 
+	if not chatboxprot:
+		print("Falha ao instanciar ChatBoxProt")
+		return
+
+	var asset_prot = chatboxprot.get_node("ChatBox")
+	var name_text_prot = chatboxprot.get_node("Name")
+	var text_text_prot = chatboxprot.get_node("Text")
+	if not name_text_prot or not text_text_prot:
+		print("Nós internos de chatbox n foram encontrados")
+		return
+		
+	name_text_prot.text = sender
+	text_text_prot.text = text
+	
+	chatboxprot.visible = true
+	
+	
+	var alignment_container = HBoxContainer.new()
+	alignment_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	
 	#ajustanfo a posicao dependendo do sender
-	if sender == "Max":
-		chatbox.set_anchors_and_offsets_preset(Control.PRESET_LEFT_WIDE)
-		chatbox.set_size(Vector2(400, 50))
-	elif sender == "Ariel":
-		chatbox.set_anchors_and_offsets_preset(Control.PRESET_RIGHT_WIDE)
-		chatbox.set_size(Vector2(400, 50))
+	if sender == "Ariel":
+		#lado esquerdo
+		alignment_container.add_child(chatboxother)
+		alignment_container.alignment = BoxContainer.ALIGNMENT_BEGIN
+		print("Ariel Adicionado")
+	elif sender == "Max":
+		#lado direito
+		alignment_container.add_child(chatboxprot)
+		alignment_container.alignment = BoxContainer.ALIGNMENT_END
+		print("Max Adicionado")
 	
-	$ScrollContainer/VBoxContainer.add_child(chatbox)
+	$ScrollContainer/VBoxContainer.add_child(alignment_container)
 	print("sucesso ao adicionar chatbox:", sender, text)
 	
 	
