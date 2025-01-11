@@ -11,7 +11,7 @@ shader = ExtResource("9_a25fv")
 shader_parameter/border_width = 0.08
 shader_parameter/border_color = Color(0.184314, 0.152941, 0.282353, 1)
 
-[node name="Control2" type="Control"]
+[node name="Control3" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -852,6 +852,7 @@ grow_vertical = 2
 theme_override_constants/separation = 0
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 943.0
 offset_top = 521.0
 offset_right = 1092.0

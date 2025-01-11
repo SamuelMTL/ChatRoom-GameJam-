@@ -1,10 +1,10 @@
 [
-    {"sender":"Teodoro", "text":"(rindo) Ariel, não acredito que você morreu de novo naquele salto! Já é a terceira vez!"},
-    {"sender":"Ariel", "text":"Ei, aquele salto é bugado! Não fui só eu, a Hannah também caiu antes!"},
-    {"sender":"Hannah", "text":"Ei, me deixa fora dessa, Ariel. Eu só caí porque você me empurrou!"},
-    {"sender":"Ariel", "text":"Claro, a culpa é sempre minha, né?"},
-    {"sender":"Max", "text":"(entrando no chat) Oi, gente! Cheguei no meio de alguma treta?"},
-    {"sender":"Hannah", "text":"(rindo) Oi, Max! Só estamos zoando o Ariel porque ele é péssimo em pular plataformas."},
-    {"sender":"Ariel", "text":"Ei, você tá atrapalhando minha reputação aqui, Hannah!"},
-    {"sender":"Teodoro", "text":"Que reputação, Ariel? Você só faz besteira!"}
+	{"sender":"Teodoro", "text":"(rindo) Ariel, não acredito que você morreu de novo naquele salto! Já é a terceira vez!"},
+	{"sender":"Ariel", "text":"Ei, aquele salto é bugado! Não fui só eu, a Hannah também caiu antes!"},
+	{"sender":"Hannah", "text":"Ei, me deixa fora dessa, Ariel. Eu só caí porque você me empurrou!"},
+	{"sender":"Ariel", "text":"Claro, a culpa é sempre minha, né?"},
+	{"sender":"Max", "text":"(entrando no chat) Oi, gente! Cheguei no meio de alguma treta?"},
+	{"sender":"Hannah", "text":"(rindo) Oi, Max! Só estamos zoando o Ariel porque ele é péssimo em pular plataformas."},
+	{"sender":"Ariel", "text":"Ei, você tá atrapalhando minha reputação aqui, Hannah!"},
+	{"sender":"Teodoro", "text":"Que reputação, Ariel? Você só faz besteira!"}
 ]
