@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://qtwqkw237834"]
 
-[ext_resource type="Script" path="res://TelaInicial_Conclusao.gd" id="1_mftuf"]
+[ext_resource type="Script" path="res://scripts/TelaInicial_Conclusao.gd" id="1_mftuf"]
 [ext_resource type="Texture2D" uid="uid://bqlv4em1vfib3" path="res://assets/TelaConclusao/TextBackground.png" id="1_nlhps"]
 [ext_resource type="Texture2D" uid="uid://bd25tf0x5l8us" path="res://assets/TelaConclusao/BasicMenuButton.png" id="2_0yill"]
-[ext_resource type="Script" path="res://Créditos_Conclusao.gd" id="2_3t8au"]
+[ext_resource type="Script" path="res://scripts/Créditos_Conclusao.gd" id="2_3t8au"]
 [ext_resource type="Texture2D" uid="uid://daespvuydmddn" path="res://assets/TelaConclusao/BasicCréditosButton.png" id="4_45yhr"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

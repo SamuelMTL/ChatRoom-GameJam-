@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cymjjeeog11rc"]
+[gd_scene load_steps=4 format=3 uid="uid://cymjjeeog11rc"]
 
 [ext_resource type="Script" path="res://scripts/tela_introducao.gd" id="1_s4slg"]
 [ext_resource type="Script" path="res://scripts/botaoIntro.gd" id="1_vd3kr"]
+[ext_resource type="Texture2D" uid="uid://dayqt7agdcun2" path="res://assets/TelaIntroducao/Ilustração_Sem_Título 57 2.png" id="2_pp0ug"]
 
-[node name="Control" type="Control"]
+[node name="Control3" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +13,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s4slg")
 json_file = "res://Dialogue/json/textoIntro.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 648.0
+texture = ExtResource("2_pp0ug")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -23,10 +30,10 @@ script = ExtResource("1_vd3kr")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 33.0
-offset_top = 19.0
-offset_right = 961.0
-offset_bottom = 632.0
+offset_left = 380.0
+offset_top = 22.0
+offset_right = 1134.0
+offset_bottom = 519.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
