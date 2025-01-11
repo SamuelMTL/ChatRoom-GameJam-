@@ -1,10 +1,80 @@
-[
-	{"sender":"Teodoro", "text":"(rindo) Ariel, não acredito que você morreu de novo naquele salto! Já é a terceira vez!"},
-	{"sender":"Ariel", "text":"Ei, aquele salto é bugado! Não fui só eu, a Hannah também caiu antes!"},
-	{"sender":"Hannah", "text":"Ei, me deixa fora dessa, Ariel. Eu só caí porque você me empurrou!"},
-	{"sender":"Ariel", "text":"Claro, a culpa é sempre minha, né?"},
-	{"sender":"Max", "text":"(entrando no chat) Oi, gente! Cheguei no meio de alguma treta?"},
-	{"sender":"Hannah", "text":"(rindo) Oi, Max! Só estamos zoando o Ariel porque ele é péssimo em pular plataformas."},
-	{"sender":"Ariel", "text":"Ei, você tá atrapalhando minha reputação aqui, Hannah!"},
-	{"sender":"Teodoro", "text":"Que reputação, Ariel? Você só faz besteira!"}
-]
+{
+	"intro": [
+		{"sender": "Teodoro", "text": "(rindo) Ariel, não acredito que você morreu de novo naquele salto! Já é a terceira vez!"},
+		{"sender": "Ariel", "text": "Ei, aquele salto é bugado! Não fui só eu, a Hannah também caiu antes!"},
+		{"sender": "Hannah", "text": "Ei, me deixa fora dessa, Ariel. Eu só caí porque você me empurrou!"},
+		{"sender": "Ariel", "text": "Claro, a culpa é sempre minha, né?"},
+		{"sender": "Max", "text": "(entrando no chat) Oi, gente! Cheguei no meio de alguma treta?"},
+		{"sender": "Hannah", "text": "(rindo) Oi, Max! Só estamos zoando o Ariel porque ele é péssimo em pular plataformas."},
+		{"sender": "Ariel", "text": "Ei, você tá atrapalhando minha reputação aqui, Hannah!"},
+		{"sender": "Teodoro", "text": "Que reputação, Ariel? Você só faz besteira!"},
+		{"sender": "Narrador","text": "Você tem duas opções:",
+			"choices": [
+				{"text": "Defender o Ariel", "next_key": "option1_1"},
+				{"text": "Entrar na zoeira", "next_key": "option1_2"}
+			]
+		}
+	],
+	"option1_1": [
+		{"sender": "Max", "text": "Ah, gente, pega leve com o Ariel! Pular plataforma realmente é chato às vezes."},
+		{"sender": "Hannah", "text": "Viu só? Pelo menos alguém tá do seu lado, Ariel."},
+		{"sender": "Ariel", "text": "Obrigado, Max! Sabia que você era o único com senso por aqui."},
+		{"sender": "Teodoro", "text": "Mas, sério, Max. Você devia jogar isso com a gente um dia. A gente tá jogando Galaxy Parkour, e é cheio dessas partes de plataforma."},
+		{"sender": "Max", "text": "Parece divertido. Preciso de uma boa desculpa pra me estressar."},
+		{"sender": "Hannah", "text": "O estresse é garantido, mas é divertido. A gente faz umas corridas entre si também."},
+		{"sender": "Ariel", "text": "(empolgado) E eu sempre perco!"},
+		{"sender": "Teodoro", "text": "Perde, mas pelo menos você tenta..."},
+		{"sender": "Hannah", "text": "Gente, que tal jogar alguma coisa mais tranquila agora? Tô meio cansada de saltar e morrer."},
+		{"sender": "Teodoro", "text": "Concordo. Que tal Card Clash Online?"},
+		{"sender": "Ariel", "text": "Boa ideia. E aí, Max? Topa?"},
+		{
+			"sender": "Narrador",
+			"text": "Você tem duas opções:",
+			"choices": [
+				{"text": "Jogar Card Clash Online", "next_key": "option2_1"},
+				{"text": "Sugerir Rocket Arena", "next_key": "option2_2"}
+			]
+		}
+	],
+	"option1_2": [
+		{"sender": "Max", "text": "Ariel, tá difícil te defender, hein? Parece que o time tá contra você!"},
+		{"sender": "Ariel", "text": "(rindo) Poxa, Max, achei que você tava do meu lado!"},
+		{"sender": "Teodoro", "text": "Nem o melhor amigo do Ariel tá poupando ele!"},
+		{"sender": "Teodoro", "text": "Mas, sério, Max. Você devia jogar isso com a gente um dia. A gente tá jogando Galaxy Parkour, e é cheio dessas partes de plataforma."},
+		{"sender": "Max", "text": "Parece divertido. Preciso de uma boa desculpa pra me estressar."},
+		{"sender": "Hannah", "text": "O estresse é garantido, mas é divertido. A gente faz umas corridas entre si também."},
+		{"sender": "Ariel", "text": "(empolgado) E eu sempre perco!"},
+		{"sender": "Teodoro", "text": "Perde, mas pelo menos você tenta..."},
+		{"sender": "Hannah", "text": "Gente, que tal jogar alguma coisa mais tranquila agora? Tô meio cansada de saltar e morrer."},
+		{"sender": "Teodoro", "text": "Concordo. Que tal Card Clash Online?"},
+		{"sender": "Ariel", "text": "Boa ideia. E aí, Max? Topa?"},
+		{
+			"sender": "Narrador",
+			"text": "Você tem duas opções:",
+			"choices": [
+				{"text": "Jogar Card Clash Online", "next_key": "option2_1"},
+				{"text": "Sugerir Rocket Arena", "next_key": "option2_2"}
+			]
+		}
+	],
+	"option2_1": [
+		{"sender": "Max", "text": "Bora! Tô dentro. É sempre bom aprender jogos novos."},
+		{"sender": "Hannah", "text": "Fechou! Vou criar a sala."},
+		{"sender": "Teodoro", "text": "Ariel, tenta não perder todas as rodadas agora, beleza?"},
+		{"sender": "Ariel", "text": "Ei, parem de zoar! Dessa vez vou ganhar!"},
+		{"sender": "Hannah", "text": "Tá bom, Ariel. Vamos ver!"},
+		{"sender": "Teodoro", "text": "Max, bem-vindo ao caos do nosso servidor. Aqui é diversão ou treta, não tem meio-termo."},
+		{"sender": "Max", "text": "Já tô me acostumando. Vou me preparar pro que vier!"},
+		{"sender": "Hannah", "text": "É isso aí! Agora bora começar a próxima rodada!"}
+	],
+	"option2_2": [
+		{"sender": "Max", "text": "Ah, que tal a gente tentar Rocket Arena? Faz tempo que não jogo algo mais dinâmico."},
+		{"sender": "Hannah", "text": "Hmm, boa também. Vamos ver quem tem as melhores habilidades de mira."},
+		{"sender": "Teodoro", "text": "Ariel, se prepara pra perder de novo!"},
+		{"sender": "Ariel", "text": "Ei, parem de zoar! Dessa vez vou ganhar!"},
+		{"sender": "Hannah", "text": "Tá bom, Ariel. Vamos ver!"},
+		{"sender": "Teodoro", "text": "Max, bem-vindo ao caos do nosso servidor. Aqui é diversão ou treta, não tem meio-termo."},
+		{"sender": "Max", "text": "Já tô me acostumando. Vou me preparar pro que vier!"},
+		{"sender": "Hannah", "text": "É isso aí! Agora bora começar a próxima rodada!"}
+	]
+}

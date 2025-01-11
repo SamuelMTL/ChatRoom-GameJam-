@@ -23,11 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uux3y")
-json_file1 = "res://Dialogue/json/textoVoiceIntro.json"
-json_file2 = "res://Dialogue/json/textoVoice1Op1.json"
-json_file3 = "res://Dialogue/json/textoVoice1Op2.json"
-json_file4 = "res://Dialogue/json/textoVoice2Op1.json"
-json_file5 = "res://Dialogue/json/textoVoice2Op2.json"
+json_file = "res://Dialogue/json/textoVoiceIntro.json"
 
 [node name="Main" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -794,6 +790,15 @@ text = "label
 "
 label_settings = SubResource("LabelSettings_4rosu")
 horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Chat/Chat/MarginContainer2"]
+layout_mode = 2
+
+[node name="Opcao1" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Opcao2" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
+layout_mode = 2
 
 [node name="Footer" type="Panel" parent="."]
 custom_minimum_size = Vector2(0, 55.29)
