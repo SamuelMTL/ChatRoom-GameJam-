@@ -19,6 +19,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 script = ExtResource("1_plj6k")
+json_file1 = "res://Dialogue/json/textoChat1Intro.json"
+json_file2 = "res://Dialogue/json/textoChat1Op1.json"
+json_file3 = "res://Dialogue/json/textoChat1Op2.json"
+json_file4 = "res://Dialogue/json/textoChat1Fim.json"
 
 [node name="Main" type="HBoxContainer" parent="."]
 layout_mode = 1
