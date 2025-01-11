@@ -1,15 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://brwe6e7h0sqxg"]
+[gd_scene load_steps=5 format=3 uid="uid://brwe6e7h0sqxg"]
 
 [ext_resource type="Script" path="res://components/UI/OtherMessageUIComponent.gd" id="1_kja3w"]
 [ext_resource type="Texture2D" uid="uid://c8v4k7o2hve3o" path="res://assets/images/chus.png" id="2_ksn22"]
+[ext_resource type="Shader" path="res://ProfilePictureShader.gdshader" id="3_bvyt4"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_vl8tn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x4moc"]
+shader = ExtResource("3_bvyt4")
+shader_parameter/border_width = 0.0
+shader_parameter/border_color = Color(0.409334, 2.27177e-05, 0.33142, 1)
 
 [node name="OtherMessageContainer" type="HBoxContainer"]
 script = ExtResource("1_kja3w")
-profile_picture = SubResource("ImageTexture_vl8tn")
+profile_picture = ExtResource("2_ksn22")
 
 [node name="IconImageTexture" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_x4moc")
 custom_minimum_size = Vector2(109.85, 70.28)
 layout_mode = 2
 size_flags_vertical = 0

@@ -1,5 +1,6 @@
 @tool
 extends HBoxContainer
+class_name OtherMessageContainer
 
 @onready var message_list_node: VBoxContainer = self.find_child("MessageList")
 @onready var profile_picture_node: TextureRect = self.find_child("IconImageTexture")
@@ -9,20 +10,24 @@ extends HBoxContainer
 var profile_picture: Texture:
 	set(val):
 		profile_picture = val
-		profile_picture_node.texture = val
-
+		if (profile_picture_node != null):
+			profile_picture_node.texture = val
+		
 
 @export_multiline
-var messages: Array[String]:
+var messages: Array[String] = []:
 	set(val):
 		messages = val
-		render_messages(val)
+		_render_messages(val)
 
-func _init(profile_texture: Texture, messages: Array[String]):
-	profile_picture = profile_texture
+func config(picture: Texture, messages: Array[String]):
+	profile_picture = picture
 	self.messages = messages
 
-func render_messages(messages: Array[String]):
+func _render_messages(messages: Array[String]):
+	if (message_list_node == null):
+		return
+	
 	for child in message_list_node.get_children():
 		child.queue_free()
 
