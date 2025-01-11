@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://boobo1s28lsfo"]
+[gd_scene load_steps=7 format=3 uid="uid://boobo1s28lsfo"]
 
 [ext_resource type="Script" path="res://scripts/tela_chat.gd" id="1_vjcra"]
+[ext_resource type="Script" path="res://scripts/NextButtonVoiceCall.gd" id="5_jnx7t"]
 [ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="8_tjyuk"]
 [ext_resource type="Shader" path="res://ProfilePictureShader.gdshader" id="9_a25fv"]
 [ext_resource type="Texture2D" uid="uid://c8v4k7o2hve3o" path="res://assets/images/chus.png" id="10_slhcg"]
@@ -10,7 +11,7 @@ shader = ExtResource("9_a25fv")
 shader_parameter/border_width = 0.08
 shader_parameter/border_color = Color(0.184314, 0.152941, 0.282353, 1)
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -849,3 +850,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 943.0
+offset_top = 521.0
+offset_right = 1092.0
+offset_bottom = 598.0
+script = ExtResource("5_jnx7t")
