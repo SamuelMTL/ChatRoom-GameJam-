@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3m7f711t3s2b"]
+[gd_scene load_steps=8 format=3 uid="uid://c3m7f711t3s2b"]
 
+[ext_resource type="Script" path="res://scripts/tela_voice_call.gd" id="1_uux3y"]
 [ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="2_lmaih"]
 [ext_resource type="Shader" path="res://ProfilePictureShader.gdshader" id="3_q2b83"]
 [ext_resource type="Script" path="res://NextButtonVoiceCall.gd" id="4_lvp42"]
@@ -10,6 +11,10 @@ shader = ExtResource("3_q2b83")
 shader_parameter/border_width = 0.08
 shader_parameter/border_color = Color(0.184314, 0.152941, 0.282353, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_4rosu"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
 [node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -17,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uux3y")
 
 [node name="Main" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -768,13 +774,21 @@ layout_mode = 2
 [node name="Panel3" type="Panel" parent="Main/Chat/Chat/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Main/Chat/Chat/MarginContainer/GridContainer"]
-layout_mode = 2
-
-[node name="Panel" type="Panel" parent="Main/Chat/Chat/MarginContainer/GridContainer/MarginContainer"]
+[node name="Panel" type="Panel" parent="Main/Chat/Chat/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(321, 190)
 layout_mode = 2
 size_flags_horizontal = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="Main/Chat/Chat"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Main/Chat/Chat/MarginContainer2"]
+layout_mode = 2
+text = "label
+"
+label_settings = SubResource("LabelSettings_4rosu")
+horizontal_alignment = 1
 
 [node name="Footer" type="Panel" parent="."]
 custom_minimum_size = Vector2(0, 55.29)
