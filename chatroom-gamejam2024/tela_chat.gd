@@ -59,6 +59,7 @@ func _append_dialogue(data: Array[Variant]):
 		var scroll_bar = scroll_container.get_v_scroll_bar()
 		scroll_bar.value = scroll_bar.max_value
 
+		await get_tree().create_timer(1.0).timeout
 
 func _on_option_chosen(option: OptionItem):
 	var index = option.index
