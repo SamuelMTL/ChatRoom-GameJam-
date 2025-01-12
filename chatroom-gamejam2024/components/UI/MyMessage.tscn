@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://i528mt0aruso"]
+
+[ext_resource type="Script" path="res://components/UI/MyMessageUIComponent.gd" id="1_q322y"]
+[ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="1_yt60w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eakcl"]
+content_margin_left = 24.0
+content_margin_top = 16.0
+content_margin_right = 24.0
+content_margin_bottom = 16.0
+bg_color = Color(0.85098, 0.811765, 0.984314, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.184314, 0.156863, 0.282353, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3g6w"]
+bg_color = Color(0.184314, 0.152941, 0.282353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.184314, 0.156863, 0.282353, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[node name="MessageContainer" type="HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+offset_right = 400.0
+offset_bottom = 50.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+alignment = 2
+script = ExtResource("1_q322y")
+message = "wefwefewfewf"
+
+[node name="MessageItem" type="Label" parent="."]
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme = ExtResource("1_yt60w")
+theme_type_variation = &"ContentLabel"
+theme_override_styles/normal = SubResource("StyleBoxFlat_eakcl")
+text = "wefwefewfewf"
+autowrap_mode = 3
+
+[node name="MessageBG" type="Panel" parent="MessageItem"]
+z_index = 1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_g3g6w")

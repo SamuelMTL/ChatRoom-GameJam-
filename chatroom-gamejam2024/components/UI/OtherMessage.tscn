@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwu1jsjmkpch1"]
+
+[ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="2_l415l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrpvm"]
+content_margin_left = 24.0
+content_margin_top = 16.0
+content_margin_right = 24.0
+content_margin_bottom = 16.0
+bg_color = Color(0.913725, 0.894118, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.184314, 0.156863, 0.282353, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3g6w"]
+bg_color = Color(0.184314, 0.152941, 0.282353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.184314, 0.156863, 0.282353, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[node name="MessageItem" type="Label"]
+z_index = 2
+size_flags_vertical = 2
+theme = ExtResource("2_l415l")
+theme_type_variation = &"ContentLabel"
+theme_override_styles/normal = SubResource("StyleBoxFlat_wrpvm")
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+autowrap_mode = 3
+
+[node name="MessageBG" type="Panel" parent="."]
+z_index = 1
+z_as_relative = false
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_g3g6w")
