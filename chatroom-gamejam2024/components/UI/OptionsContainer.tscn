@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpuexgtq1gypd"]
+
+[ext_resource type="Script" path="res://components/UI/OptionsContainerUIComponent.gd" id="1_06nq4"]
+[ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="1_gugs6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rymgw"]
+bg_color = Color(0.560784, 0.521569, 0.713726, 1)
+border_width_left = 2
+border_width_right = 2
+border_color = Color(0.184314, 0.152941, 0.282353, 1)
+
+[node name="OptionsContainer" type="ScrollContainer"]
+custom_minimum_size = Vector2(0, 48.08)
+offset_top = 1.0
+offset_right = 642.0
+offset_bottom = 49.08
+theme = ExtResource("1_gugs6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rymgw")
+script = ExtResource("1_06nq4")
+options = Array[String](["erwgergergerg", "wefewfwfewfwefwef", "wefwefewfwfeewfwefewfewf", "ewfewfewfewfw", "wefwefweewfewfewfewf"])
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 6
+
+[node name="OptionsList" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
