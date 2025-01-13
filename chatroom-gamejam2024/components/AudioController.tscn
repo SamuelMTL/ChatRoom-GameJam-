@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0hnh15b3ct57"]
+
+[ext_resource type="Script" path="res://components/audio_controller.gd" id="1_n5hpc"]
+[ext_resource type="AudioStream" uid="uid://dlh4ivjulke3r" path="res://assets/lofi.mp3" id="1_necry"]
+
+[node name="AudioController" type="Node"]
+script = ExtResource("1_n5hpc")
+
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 3)
+stream = ExtResource("1_necry")
+volume_db = -20.71
+autoplay = true
