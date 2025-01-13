@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3m7f711t3s2b"]
+[gd_scene load_steps=10 format=3 uid="uid://c3m7f711t3s2b"]
 
 [ext_resource type="Script" path="res://scripts/tela_voice_call.gd" id="1_uux3y"]
 [ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="2_lmaih"]
 [ext_resource type="Shader" path="res://ProfilePictureShader.gdshader" id="3_q2b83"]
 [ext_resource type="Script" path="res://NextButtonVoiceCall.gd" id="4_lvp42"]
 [ext_resource type="Texture2D" uid="uid://c8v4k7o2hve3o" path="res://assets/images/chus.png" id="4_utvwn"]
+[ext_resource type="Script" path="res://scripts/opcao_1_voiceChat.gd" id="5_tat01"]
+[ext_resource type="Script" path="res://scripts/opcao_2_voicechat.gd" id="6_7x0av"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_32cjq"]
 shader = ExtResource("3_q2b83")
@@ -23,7 +25,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uux3y")
-json_file = "res://Dialogue/json/textoVoiceIntro.json"
+json_file1 = "res://Dialogue/json/textoVoiceIntro.json"
+json_file2 = "res://Dialogue/json/textoVoice1Op1.json"
+json_file3 = "res://Dialogue/json/textoVoice1Op2.json"
+json_file4 = "res://Dialogue/json/textoVoice2Op1.json"
+json_file5 = "res://Dialogue/json/textoVoice2Op2.json"
 
 [node name="Main" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -784,21 +790,24 @@ size_flags_horizontal = 0
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Chat/Chat/MarginContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Opcao1" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("5_tat01")
+
+[node name="Opcao2" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("6_7x0av")
+
 [node name="Label" type="Label" parent="Main/Chat/Chat/MarginContainer2"]
 layout_mode = 2
 text = "label
 "
 label_settings = SubResource("LabelSettings_4rosu")
 horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Main/Chat/Chat/MarginContainer2"]
-layout_mode = 2
-
-[node name="Opcao1" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-
-[node name="Opcao2" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
-layout_mode = 2
 
 [node name="Footer" type="Panel" parent="."]
 custom_minimum_size = Vector2(0, 55.29)
@@ -838,3 +847,6 @@ offset_top = 521.0
 offset_right = 1092.0
 offset_bottom = 598.0
 script = ExtResource("4_lvp42")
+
+[connection signal="pressed" from="Main/Chat/Chat/MarginContainer2/HBoxContainer/Opcao1" to="Main/Chat/Chat/MarginContainer2/HBoxContainer/Opcao1" method="_on_pressed"]
+[connection signal="pressed" from="Main/Chat/Chat/MarginContainer2/HBoxContainer/Opcao2" to="Main/Chat/Chat/MarginContainer2/HBoxContainer/Opcao2" method="_on_pressed"]
