@@ -23,3 +23,7 @@ AudioController="*res://components/AudioController.tscn"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
