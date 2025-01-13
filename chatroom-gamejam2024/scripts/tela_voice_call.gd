@@ -8,18 +8,22 @@ extends Control
 
 
 @onready var label_display: Label = $Main/Chat/Chat/MarginContainer2/Label
-@onready var option1_button: Button = $Main/Chat/Chat/MarginContainer2/HBoxContainer/Opcao1
-@onready var option2_button: Button = $Main/Chat/Chat/MarginContainer2/HBoxContainer/Opcao2
+@onready var option1_button: Button = $Opcao1
+@onready var option2_button: Button = $Opcao2
+@onready var next_scene_button: Button = $NextSceneButton
 
 var dialogue = []
 var current_dialogue_id = -1
 var d_active = true
 var next_dialogue_files = []
+var choice_state = 0
 
 func _ready():
 	start()
 	option1_button.pressed.connect(self._on_option1_pressed)
 	option2_button.pressed.connect(self._on_option2_pressed)
+	next_scene_button.pressed.connect(self._on_next_scene_button_pressed)
+	next_scene_button.visible = false
 	
 
 func start():
@@ -35,10 +39,19 @@ func load_dialogue(json_file: String):
 	return json_as_dict # Retorna o conteúdo do JSON ou uma lista vazia se falhar
 		
 		
-func display_choice_buttons(choices):
+func display_choice_buttons():
+	# Exibe os botoes de escolha com base no estado atual
+	match choice_state:
+		0:
+			option1_button.text = "Entrar na brincadeira"
+			option2_button.text = "Defender Ariel"
+		1: 
+			option1_button.text = "Aceitar jogar"
+			option2_button.text = "Sugerir outro jogo"
+		_:
+			show_next_scene_button()
+			
 	#exibe os botoes de escolha
-	option1_button.text = choices[0]
-	option2_button.text = choices[1]
 	option1_button.visible = true
 	option2_button.visible = true
 	
@@ -52,6 +65,9 @@ func switch_dialogue(choice: int):
 		dialogue = load_dialogue(next_dialogue_files[choice])
 		next_dialogue_files = [json_file4, json_file5] if choice == 0 else [json_file4, json_file5]
 	current_dialogue_id = -1
+	label_display.visible = true
+	#avanca o estado do jogo
+	choice_state += 1
 	next_script()
 	
 func next_script():
@@ -60,10 +76,11 @@ func next_script():
 	if current_dialogue_id >= len(dialogue):
 		#qnd acaba o dialogo, mostra a opcao de escolha
 		if next_dialogue_files.size() > 0:
-			display_choice_buttons(["Entrar na brincadeira", "Defender Ariel"])
+			display_choice_buttons()
 			label_display.visible = false
 		else:
 			d_active = false
+			show_next_scene_button()
 		return
 		
 	var current_data = dialogue[current_dialogue_id]
@@ -84,3 +101,14 @@ func _on_option1_pressed():
 func _on_option2_pressed():
 	switch_dialogue(1)
 	print("botao 2 apertado")
+	
+func show_next_scene_button():
+	#oculta o resto
+	label_display.visible = false
+	hide_choice_buttons()
+	next_scene_button.visible = true
+	
+func _on_next_scene_button_pressed(): 
+	get_tree().change_scene_to_file("res://TelaRecap2.tscn")
+	print("Avançando para a próxima tela")
+	
