@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://boobo1s28lsfo"]
+[gd_scene load_steps=10 format=3 uid="uid://cum1ydirx0351"]
 
 [ext_resource type="Script" path="res://tela_chat.gd" id="1_plj6k"]
+[ext_resource type="Texture2D" uid="uid://cphahv2fccllf" path="res://assets/images/hannah-profile.jpeg" id="2_sinpa"]
+[ext_resource type="Texture2D" uid="uid://biosp17j78j37" path="res://assets/images/teodoro-profile.jpeg" id="3_gti8k"]
 [ext_resource type="PackedScene" uid="uid://bpuexgtq1gypd" path="res://components/UI/OptionsContainer.tscn" id="5_wsie4"]
 [ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="8_tjyuk"]
 [ext_resource type="Shader" path="res://ProfilePictureShader.gdshader" id="9_a25fv"]
@@ -31,6 +33,8 @@ json_file1 = "res://Dialogue/json/textoChat1Intro.json"
 json_file2 = "res://Dialogue/json/textoChat1Op1.json"
 json_file3 = "res://Dialogue/json/textoChat1Op2.json"
 json_file4 = "res://Dialogue/json/textoChat1Fim.json"
+hannah_profile = ExtResource("2_sinpa")
+teodoro_profile = ExtResource("3_gti8k")
 
 [node name="Main" type="HBoxContainer" parent="."]
 layout_mode = 2
