@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cum1ydirx0351"]
+[gd_scene load_steps=8 format=3 uid="uid://boobo1s28lsfo"]
 
 [ext_resource type="Script" path="res://tela_chat.gd" id="1_plj6k"]
 [ext_resource type="PackedScene" uid="uid://bpuexgtq1gypd" path="res://components/UI/OptionsContainer.tscn" id="5_wsie4"]
