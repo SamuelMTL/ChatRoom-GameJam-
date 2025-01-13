@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3m7f711t3s2b"]
+[gd_scene load_steps=8 format=3 uid="uid://c3m7f711t3s2b"]
 
 [ext_resource type="Script" path="res://scripts/tela_voice_call.gd" id="1_uux3y"]
 [ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="2_lmaih"]
 [ext_resource type="Shader" path="res://ProfilePictureShader.gdshader" id="3_q2b83"]
 [ext_resource type="Script" path="res://NextButtonVoiceCall.gd" id="4_lvp42"]
 [ext_resource type="Texture2D" uid="uid://c8v4k7o2hve3o" path="res://assets/images/chus.png" id="4_utvwn"]
-[ext_resource type="Script" path="res://scripts/opcao_1_voiceChat.gd" id="5_tat01"]
-[ext_resource type="Script" path="res://scripts/opcao_2_voicechat.gd" id="6_7x0av"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_32cjq"]
 shader = ExtResource("3_q2b83")
@@ -17,7 +15,7 @@ shader_parameter/border_color = Color(0.184314, 0.152941, 0.282353, 1)
 font_size = 24
 font_color = Color(0, 0, 0, 1)
 
-[node name="Control2" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -790,24 +788,27 @@ size_flags_horizontal = 0
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Main/Chat/Chat/MarginContainer2"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="Opcao1" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-script = ExtResource("5_tat01")
-
-[node name="Opcao2" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-script = ExtResource("6_7x0av")
-
 [node name="Label" type="Label" parent="Main/Chat/Chat/MarginContainer2"]
 layout_mode = 2
 text = "label
 "
 label_settings = SubResource("LabelSettings_4rosu")
 horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Chat/Chat/MarginContainer2"]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Opcao1" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(180, 100)
+layout_mode = 2
+text = "Botao 1"
+
+[node name="Opcao2" type="Button" parent="Main/Chat/Chat/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+text = "Botao 2"
 
 [node name="Footer" type="Panel" parent="."]
 custom_minimum_size = Vector2(0, 55.29)

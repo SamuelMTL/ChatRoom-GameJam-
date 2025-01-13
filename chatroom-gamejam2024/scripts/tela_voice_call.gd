@@ -18,6 +18,9 @@ var next_dialogue_files = []
 
 func _ready():
 	start()
+	option1_button.pressed.connect(self._on_option1_pressed)
+	option2_button.pressed.connect(self._on_option2_pressed)
+	
 
 func start():
 	#inicia com o primeiro json
@@ -57,7 +60,8 @@ func next_script():
 	if current_dialogue_id >= len(dialogue):
 		#qnd acaba o dialogo, mostra a opcao de escolha
 		if next_dialogue_files.size() > 0:
-			display_choice_buttons(["Opcao 1", "Opcao 2"])
+			display_choice_buttons(["Entrar na brincadeira", "Defender Ariel"])
+			label_display.visible = false
 		else:
 			d_active = false
 		return
@@ -65,7 +69,7 @@ func next_script():
 	var current_data = dialogue[current_dialogue_id]
 	var sender = current_data["sender"]
 	var text = current_data["text"]
-	label_display.text = "[%s]: %s" % [sender, text]
+	label_display.text = "%s: %s" % [sender, text]
 	
 	hide_choice_buttons()
 	
@@ -73,7 +77,10 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		next_script()
 	
-
-
-func _on_pressed() -> void:
-	pass # Replace with function body.
+func _on_option1_pressed():
+	switch_dialogue(0)
+	print("botao 1 apertado")
+	
+func _on_option2_pressed():
+	switch_dialogue(1)
+	print("botao 2 apertado")
