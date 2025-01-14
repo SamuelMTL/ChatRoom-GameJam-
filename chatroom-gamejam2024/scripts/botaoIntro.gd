@@ -1,6 +1,6 @@
 extends Button
 
-static var asd  = 10
+static var asd = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,4 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _button_pressed():
-	get_tree().change_scene_to_file("res://TelaChat.tscn")
+	# get_tree().change_scene_to_file("res://TelaChat.tscn")
+	SceneManager.change_to_scene_file("res://TelaChat.tscn")
+	pass
