@@ -36,6 +36,7 @@ offset_top = 13.0
 offset_right = 137.5
 offset_bottom = 36.0
 theme = SubResource("Theme_sowjl")
+theme_override_colors/default_color = Color(0.184314, 0.156863, 0.282353, 1)
 
 [node name="Text" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -44,3 +45,4 @@ offset_top = 36.0
 offset_right = 355.0
 offset_bottom = 76.0
 theme = SubResource("Theme_fetdh")
+theme_override_colors/default_color = Color(0.184314, 0.156863, 0.282353, 1)
