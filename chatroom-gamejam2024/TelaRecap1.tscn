@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/NextButtonRecap.gd" id="1_dc51f"]
 [ext_resource type="Texture2D" uid="uid://c5c22k3v7ehrn" path="res://assets/TelaConclusao/Frame 1ButtonNext.png" id="3_yfjus"]
 
-[node name="Control2" type="Control"]
+[node name="Control3" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

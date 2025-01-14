@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3m7f711t3s2b"]
+[gd_scene load_steps=9 format=3 uid="uid://c3m7f711t3s2b"]
 
 [ext_resource type="Script" path="res://scripts/tela_voice_call.gd" id="1_uux3y"]
 [ext_resource type="Theme" uid="uid://bojc7127wexfm" path="res://themes/main_theme.tres" id="2_lmaih"]
 [ext_resource type="Shader" path="res://ProfilePictureShader.gdshader" id="3_q2b83"]
 [ext_resource type="Texture2D" uid="uid://c8v4k7o2hve3o" path="res://assets/images/chus.png" id="4_utvwn"]
 [ext_resource type="Texture2D" uid="uid://c5c22k3v7ehrn" path="res://assets/TelaConclusao/Frame 1ButtonNext.png" id="5_g226r"]
+[ext_resource type="Texture2D" uid="uid://dq8essm8iqc7e" path="res://assets/images/iconsVoice.png" id="6_cgmes"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_32cjq"]
 shader = ExtResource("3_q2b83")
@@ -12,7 +13,7 @@ shader_parameter/border_width = 0.08
 shader_parameter/border_color = Color(0.184314, 0.152941, 0.282353, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4rosu"]
-font_size = 24
+font_size = 14
 font_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
@@ -754,7 +755,7 @@ offset_bottom = 18.0
 grow_vertical = 2
 theme = ExtResource("2_lmaih")
 theme_type_variation = &"HeaderLabel"
-text = "Nome do Servidor"
+text = "MosaicoSpace"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -762,27 +763,6 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-
-[node name="GridContainer" type="GridContainer" parent="Main/Chat/Chat/MarginContainer"]
-custom_minimum_size = Vector2(321, 190)
-layout_mode = 2
-columns = 2
-
-[node name="Panel4" type="Panel" parent="Main/Chat/Chat/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(321, 190)
-layout_mode = 2
-
-[node name="Panel2" type="Panel" parent="Main/Chat/Chat/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(321, 190)
-layout_mode = 2
-
-[node name="Panel3" type="Panel" parent="Main/Chat/Chat/MarginContainer/GridContainer"]
-layout_mode = 2
-
-[node name="Panel" type="Panel" parent="Main/Chat/Chat/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(321, 190)
-layout_mode = 2
-size_flags_horizontal = 0
 
 [node name="MarginContainer2" type="MarginContainer" parent="Main/Chat/Chat"]
 custom_minimum_size = Vector2(100, 150)
@@ -834,7 +814,7 @@ theme_override_constants/separation = 0
 [node name="NextSceneButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 930.0
-offset_top = 510.0
+offset_top = 521.0
 offset_right = 1133.0
 offset_bottom = 581.0
 
@@ -842,9 +822,9 @@ offset_bottom = 581.0
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.062
-offset_left = -1.0
-offset_right = 203.0
-offset_bottom = 65.598
+offset_top = -1.0
+offset_right = 204.0
+offset_bottom = 57.598
 texture = ExtResource("5_g226r")
 
 [node name="Opcao1" type="Button" parent="."]
@@ -864,6 +844,16 @@ offset_top = 523.0
 offset_right = 907.0
 offset_bottom = 588.0
 text = "Botao 2"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+offset_left = 390.0
+offset_top = 90.0
+offset_right = 1029.42
+offset_bottom = 480.0
+texture = ExtResource("6_cgmes")
 
 [connection signal="pressed" from="NextSceneButton" to="." method="_on_next_scene_button_pressed"]
 [connection signal="pressed" from="Opcao1" to="Opcao1" method="_on_pressed"]

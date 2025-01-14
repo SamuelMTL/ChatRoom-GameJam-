@@ -48,13 +48,18 @@ func display_choice_buttons():
 		1: 
 			option1_button.text = "Aceitar jogar"
 			option2_button.text = "Sugerir outro jogo"
-		_:
+		2:
 			show_next_scene_button()
 			
 	#exibe os botoes de escolha
-	option1_button.visible = true
-	option2_button.visible = true
-	
+	if choice_state == 0 || choice_state == 1:
+		option1_button.visible = true
+		option2_button.visible = true
+	elif choice_state == 2:
+		option1_button.visible = false
+		option2_button.visible = false
+	else:
+		print("algo deu errado")
 func hide_choice_buttons():
 	#oculta os botoes de escolha
 	option1_button.visible = false
