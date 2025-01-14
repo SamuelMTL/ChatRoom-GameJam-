@@ -6,9 +6,13 @@ extends Control
 
 @onready var messages_list_node: VBoxContainer = find_child("MessagesList", true)
 @onready var options_list_node: OptionsContainer = find_child("OptionsContainer", true)
+@onready var scroll_container: ScrollContainer = find_child("MessagesScrollContainer", true)
+
 @onready var other_message_container = preload("res://components/UI/OtherMessageContainer.tscn")
 @onready var my_message_container_component = preload("res://components/UI/MyMessage.tscn")
-@onready var scroll_container: ScrollContainer = find_child("MessagesScrollContainer", true)
+
+@export var hannah_profile: Texture
+@export var teodoro_profile: Texture
 
 var message_stack: Array[Dictionary] = []
 
@@ -72,7 +76,17 @@ func _append_dialogue(data: Array[Variant]):
 			else:
 				var message_node: OtherMessageContainer = other_message_container.instantiate()
 				messages_list_node.add_child(message_node)
-				message_node.config(PlaceholderTexture2D.new(), [content])
+
+				var texture: Texture
+
+				match sender:
+					"Hannah":
+						texture = hannah_profile
+					"Teodoro":
+						texture = teodoro_profile
+
+				
+				message_node.config(texture, [content])
 				message_node.grab_focus()
 
 	
@@ -100,3 +114,7 @@ func _on_option_chosen(option: OptionItem):
 			await _show_json_dialogue(json_file3)
 			
 	await _show_json_dialogue(json_file4)
+
+	await get_tree().create_timer(2.0).timeout
+
+	SceneManager.change_to_scene_file("res://TelaRecap1.tscn")

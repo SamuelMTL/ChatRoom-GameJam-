@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://biml6jxmhxown"]
+[gd_scene load_steps=4 format=3 uid="uid://biml6jxmhxown"]
 
+[ext_resource type="Texture2D" uid="uid://dly73ikpsmod1" path="res://assets/images/Ilustração_Sem_Título 4.png" id="1_etjb0"]
 [ext_resource type="Script" path="res://scripts/NextButtonTelaRecap2.gd" id="1_ob6sb"]
+[ext_resource type="Texture2D" uid="uid://c5c22k3v7ehrn" path="res://assets/TelaConclusao/Frame 1ButtonNext.png" id="3_24jl7"]
 
-[node name="Control2" type="Control"]
+[node name="Control3" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,10 +12,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_top = -129.0
+offset_right = 1273.0
+offset_bottom = 749.0
+texture = ExtResource("1_etjb0")
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 930.0
-offset_top = 486.0
-offset_right = 1099.0
-offset_bottom = 587.0
+offset_left = 890.0
+offset_top = 507.0
+offset_right = 1109.0
+offset_bottom = 579.0
 script = ExtResource("1_ob6sb")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Button"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -4.0
+offset_right = 223.0
+offset_bottom = 77.0
+texture = ExtResource("3_24jl7")

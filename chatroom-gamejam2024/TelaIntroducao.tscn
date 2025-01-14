@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cymjjeeog11rc"]
+[gd_scene load_steps=6 format=3 uid="uid://cymjjeeog11rc"]
 
 [ext_resource type="Script" path="res://scripts/tela_introducao.gd" id="1_s4slg"]
 [ext_resource type="Script" path="res://scripts/botaoIntro.gd" id="1_vd3kr"]
-[ext_resource type="Texture2D" uid="uid://dayqt7agdcun2" path="res://assets/TelaIntroducao/Ilustração_Sem_Título 57 2.png" id="2_pp0ug"]
+[ext_resource type="Texture2D" uid="uid://j75cvo3jrvyw" path="res://assets/TelaIntroducao/Ilustração_Sem_Título 3.png" id="2_wt6t5"]
+[ext_resource type="Texture2D" uid="uid://c5c22k3v7ehrn" path="res://assets/TelaConclusao/Frame 1ButtonNext.png" id="4_p07t4"]
+[ext_resource type="Texture2D" uid="uid://6pqlcn6hvomw" path="res://assets/TelaConclusao/BasicAperteButton.png" id="5_dtmpx"]
 
 [node name="Control3" type="Control"]
 layout_mode = 3
@@ -16,16 +18,18 @@ json_file = "res://Dialogue/json/textoIntro.json"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 1149.0
-offset_bottom = 648.0
-texture = ExtResource("2_pp0ug")
+offset_left = 1.0
+offset_top = -127.0
+offset_right = 1253.0
+offset_bottom = 757.0
+texture = ExtResource("2_wt6t5")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 978.0
-offset_top = 534.0
+offset_left = 840.0
+offset_top = 538.0
 offset_right = 1081.0
-offset_bottom = 614.0
+offset_bottom = 600.0
 script = ExtResource("1_vd3kr")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -39,3 +43,19 @@ offset_bottom = 519.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 538.0
+offset_right = 1081.0
+offset_bottom = 602.0
+texture = ExtResource("4_p07t4")
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 20.0
+offset_right = 355.0
+offset_bottom = 80.0
+texture = ExtResource("5_dtmpx")

@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://qtwqkw237834"]
+[gd_scene load_steps=9 format=3 uid="uid://qtwqkw237834"]
 
+[ext_resource type="Texture2D" uid="uid://dayqt7agdcun2" path="res://assets/TelaIntroducao/Ilustração_Sem_Título 57 2.png" id="1_1pdap"]
 [ext_resource type="Script" path="res://scripts/TelaInicial_Conclusao.gd" id="1_mftuf"]
 [ext_resource type="Texture2D" uid="uid://bqlv4em1vfib3" path="res://assets/TelaConclusao/TextBackground.png" id="1_nlhps"]
 [ext_resource type="Texture2D" uid="uid://bd25tf0x5l8us" path="res://assets/TelaConclusao/BasicMenuButton.png" id="2_0yill"]
 [ext_resource type="Script" path="res://scripts/Créditos_Conclusao.gd" id="2_3t8au"]
 [ext_resource type="Texture2D" uid="uid://daespvuydmddn" path="res://assets/TelaConclusao/BasicCréditosButton.png" id="4_45yhr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xrrk8"]
+font_color = Color(0.184314, 0.156863, 0.282353, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tg1q5"]
+font_color = Color(0.184314, 0.156863, 0.282353, 1)
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -13,6 +20,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("1_1pdap")
 
 [node name="TelaInicial" type="Button" parent="."]
 layout_mode = 0
@@ -48,8 +61,37 @@ texture = ExtResource("4_45yhr")
 
 [node name="TextBackground" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = 586.0
+offset_left = 588.0
 offset_top = 52.0
-offset_right = 1098.0
+offset_right = 1107.0
 offset_bottom = 386.0
 texture = ExtResource("1_nlhps")
+
+[node name="Label" type="Label" parent="TextBackground"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 17.0
+offset_right = 509.0
+offset_bottom = 283.0
+text = "Durante a pandemia, a distância física nos separou de muitas
+coisas e pessoas importantes. No entanto, a conexão virtual 
+trouxe uma nova forma de proximidade. Amizades online se 
+tornaram refúgios emocionais, espaços de troca e apoio em um 
+momento de incertezas. Essas conexões provaram que a 
+socialização não depende apenas da presença física, mas do 
+carinho, compreensão e risadas compartilhadas, mesmo que 
+por meio de uma tela. Para muitos, esses laços ajudaram a
+superar a solidão, mostrando que, mesmo longe, podemos estar 
+juntos."
+label_settings = SubResource("LabelSettings_xrrk8")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextBackground"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 293.0
+offset_right = 515.0
+offset_bottom = 316.0
+text = "Obrigado por jogar!"
+label_settings = SubResource("LabelSettings_tg1q5")
+horizontal_alignment = 1
