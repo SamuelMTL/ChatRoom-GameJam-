@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cum1ydirx0351"]
+[gd_scene load_steps=10 format=3 uid="uid://boobo1s28lsfo"]
 
 [ext_resource type="Script" path="res://tela_chat.gd" id="1_plj6k"]
 [ext_resource type="Texture2D" uid="uid://cphahv2fccllf" path="res://assets/images/hannah-profile.jpeg" id="2_sinpa"]
