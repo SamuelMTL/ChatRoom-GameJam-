@@ -12,6 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _button_pressed():
-	# get_tree().change_scene_to_file("res://TelaChat.tscn")
+	# SceneManager.change_to_scene_file("res://TelaChat.tscn")
 	SceneManager.change_to_scene_file("res://TelaChat.tscn")
 	pass

@@ -114,3 +114,7 @@ func _on_option_chosen(option: OptionItem):
 			await _show_json_dialogue(json_file3)
 			
 	await _show_json_dialogue(json_file4)
+
+	await get_tree().create_timer(2.0).timeout
+
+	SceneManager.change_to_scene_file("res://TelaRecap1.tscn")
