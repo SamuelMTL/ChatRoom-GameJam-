@@ -183,7 +183,7 @@ offset_bottom = 18.0
 grow_vertical = 2
 theme = ExtResource("8_tjyuk")
 theme_type_variation = &"HeaderLabel"
-text = "Nome do Servidor"
+text = "MosaicoSpace"
 horizontal_alignment = 1
 vertical_alignment = 1
 
