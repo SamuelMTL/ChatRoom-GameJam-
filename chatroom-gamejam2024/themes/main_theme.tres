@@ -1,10 +1,36 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://bojc7127wexfm"]
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://bojc7127wexfm"]
 
 [ext_resource type="FontFile" uid="uid://cjf3inc3uq1fd" path="res://assets/Fonts/Itim,Jost/Itim/Itim-Regular.ttf" id="1_2xi57"]
 [ext_resource type="FontFile" uid="uid://ct312wthlqri7" path="res://assets/Fonts/Itim,Jost/Jost/static/Jost-Regular.ttf" id="1_66ior"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0dp3e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kacxy"]
+bg_color = Color(0.446359, 0.409091, 0.600591, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.184314, 0.152941, 0.282353, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3d0y"]
 bg_color = Color(0.556863, 0.521569, 0.713726, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.184314, 0.152941, 0.282353, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8c4x"]
+bg_color = Color(0.446359, 0.409091, 0.600591, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -78,7 +104,10 @@ border_width_left = 8
 border_color = Color(0.619608, 0.611765, 0.713726, 1)
 
 [resource]
+Button/styles/focus = SubResource("StyleBoxEmpty_0dp3e")
+Button/styles/hover = SubResource("StyleBoxFlat_kacxy")
 Button/styles/normal = SubResource("StyleBoxFlat_r3d0y")
+Button/styles/pressed = SubResource("StyleBoxFlat_c8c4x")
 ContentLabel/base_type = &"Label"
 ContentLabel/font_sizes/font_size = 12
 ContentLabel/fonts/font = ExtResource("1_66ior")
